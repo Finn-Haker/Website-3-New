@@ -1,0 +1,134 @@
+.header {
+    background-color: #008cff;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: white;
+    padding-top: 100px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    margin: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+h1 {color:rgb(0, 0, 0);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.headline2 {color:red;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+} 
+
+.container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    color:black
+}
+
+@media (max-width: 700px) {
+    .header {
+        height: 72px;
+        justify-content: flex-end;
+        padding: 0 20px;
+    }
+
+    body {
+        padding-top: 72px;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 6px;
+        width: 44px;
+        height: 44px;
+        padding: 9px;
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 26px;
+        height: 3px;
+        border-radius: 2px;
+        background-color: white;
+        transition: transform 200ms ease, opacity 200ms ease;
+    }
+
+    .header.menu-open .menu-toggle span:first-child {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .header.menu-open .menu-toggle span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .header.menu-open .menu-toggle span:last-child {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        max-height: 0;
+        flex-direction: column;
+        align-items: stretch;
+        overflow: hidden;
+        background-color: #008cff;
+        opacity: 0;
+        visibility: hidden;
+        transition: max-height 250ms ease, opacity 200ms ease, visibility 250ms;
+    }
+
+    .header.menu-open .nav-links {
+        max-height: 240px;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-links a {
+        margin: 0;
+        padding: 16px 24px;
+    }
+
+    .nav-links a:hover {
+        background-color: #0075d1;
+        color: white;
+    }
+}
