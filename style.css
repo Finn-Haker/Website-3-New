@@ -1,6 +1,6 @@
 .header {
     background-color: #008cff;
-    height: 100px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,7 +15,7 @@
 body {
     margin: 0;
     color: white;
-    padding-top: 100px;
+    padding-top: 60px;
 }
 
 .nav-links {
@@ -39,11 +39,6 @@ body {
 }
 
 h1 {color:rgb(0, 0, 0);
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-}
-
-.headline2 {color:red;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 } 
@@ -131,4 +126,16 @@ h1 {color:rgb(0, 0, 0);
         background-color: #0075d1;
         color: white;
     }
+}
+
+
+
+
+
+/*Header Ende"*/
+.mainheadline {
+    margin-top:0;
+    text-align:center;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-size: 60px;
 }
