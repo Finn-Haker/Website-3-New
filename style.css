@@ -56,7 +56,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    width: 100%;
+    width: calc(100% - 100px);
     max-width: 1000px;
 }
 
@@ -84,6 +84,40 @@ main {
 
 .menu-toggle {
     display: none;
+}
+
+.social-links {
+    position: absolute;
+    right: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.social-links a {
+    display: grid;
+    width: 34px;
+    height: 34px;
+    place-items: center;
+    color: #34231a;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #684b3e;
+}
+
+.social-links svg {
+    display: block;
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+}
+
+.social-links .instagram-icon {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
 }
 
 h1 {color:rgb(0, 0, 0);
@@ -138,6 +172,11 @@ h1 {color:rgb(0, 0, 0);
         background: transparent;
         cursor: pointer;
         z-index: 1;
+    }
+
+    .social-links {
+        left: 16px;
+        right: auto;
     }
 
     .menu-toggle span {
