@@ -162,7 +162,7 @@ h1 {color:rgb(0, 0, 0);
     }
 
     .header.menu-open .nav-links {
-        max-height: 240px;
+        max-height: 300px;
         opacity: 1;
         visibility: visible;
     }
@@ -195,6 +195,11 @@ h1 {color:rgb(0, 0, 0);
     font-family: serif;
     font-size: clamp(1rem, 5vw, 2rem);
     color: black;
+}
+
+.nav-links a[aria-current="page"],
+.footer-links a[aria-current="page"] {
+    color: #d6d6d6;
 }
 
 .content-section {
