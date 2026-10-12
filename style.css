@@ -1,5 +1,5 @@
 .header {
-    background-color: #008cff;
+    background-color: #e0d7c7;
     height: 50px;
     display: flex;
     justify-content: center;
@@ -10,6 +10,7 @@
     width: 100%;
     z-index: 1000;
     box-sizing: border-box;
+    color:#34231a;
 }
 
 body {
@@ -54,17 +55,31 @@ main {
 .nav-links {
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    max-width: 1000px;
 }
 
 .nav-links a {
-    margin: 20px;
-    color: white;
+    margin: 0;
+    padding: 12px clamp(4px, 1.2vw, 14px);
+    color: #34231a;
+    font-size: clamp(0.78rem, 1.1vw, 0.95rem);
     text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
 }
 
 .nav-links a:hover {
-    color: rgb(0, 0, 0);
+    color: #684b3e;
     text-decoration: underline;
+}
+
+.nav-links a[aria-current="page"] {
+    color: #684b3e;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 4px;
 }
 
 .menu-toggle {
@@ -130,7 +145,7 @@ h1 {color:rgb(0, 0, 0);
         width: 26px;
         height: 3px;
         border-radius: 2px;
-        background-color: white;
+        background-color: #34231a;
         transition: transform 200ms ease, opacity 200ms ease;
     }
 
@@ -155,14 +170,14 @@ h1 {color:rgb(0, 0, 0);
         flex-direction: column;
         align-items: stretch;
         overflow: hidden;
-        background-color: #008cff;
+        background-color: #e0d7c7;
         opacity: 0;
         visibility: hidden;
         transition: max-height 250ms ease, opacity 200ms ease, visibility 250ms;
     }
 
     .header.menu-open .nav-links {
-        max-height: 300px;
+        max-height: 360px;
         opacity: 1;
         visibility: visible;
     }
@@ -173,8 +188,12 @@ h1 {color:rgb(0, 0, 0);
     }
 
     .nav-links a:hover {
-        background-color: #0075d1;
-        color: white;
+        background-color: #d3c5b0;
+        color: #34231a;
+    }
+
+    .nav-links a[aria-current="page"] {
+        background-color: #d3c5b0;
     }
 }
 
@@ -197,7 +216,6 @@ h1 {color:rgb(0, 0, 0);
     color: black;
 }
 
-.nav-links a[aria-current="page"],
 .footer-links a[aria-current="page"] {
     color: #d6d6d6;
 }
