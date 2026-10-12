@@ -31,7 +31,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #008cff;
+    background-color: #000000;
 }
 
 .footer-links {
@@ -47,7 +47,7 @@ main {
 }
 
 .footer-links a:hover {
-    color: rgb(0, 0, 0);
+    color: white;
     text-decoration: underline;
 }
 
@@ -180,4 +180,11 @@ h1 {color:rgb(0, 0, 0);
     text-align:center;
     font-family: Brush Script MT, Brush Script Std, cursive;
     font-size: clamp(2.5rem, 10vw, 8rem);
+}
+
+.underheadline {
+    text-align:center;
+    font-family: serif;
+    font-size: clamp(1rem, 5vw, 2rem);
+    color: black;
 }
