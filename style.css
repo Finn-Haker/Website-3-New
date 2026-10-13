@@ -27,6 +27,46 @@ main {
     flex: 1;
 }
 
+.recipe-category-list {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: 0.65rem 1.5rem;
+    max-width: 52rem;
+    margin: 1.5rem auto 3rem;
+    padding: 0 2rem;
+    color: #1f1f1f;
+    list-style: disc inside;
+}
+
+.recipe-page-title {
+    text-align: center;
+}
+
+.recipe-category-list li {
+    padding: 0.65rem 0.85rem;
+    border-radius: 0.35rem;
+    background-color: #f5f0e8;
+    transition: background-color 180ms ease, transform 180ms ease;
+}
+
+.recipe-category-list li:hover {
+    background-color: #e0d7c7;
+    transform: translateX(3px);
+}
+
+.recipe-category-list a {
+    color: #1f1f1f;
+    text-decoration: none;
+}
+
+.recipe-category-list li:hover a,
+.recipe-category-list a:focus-visible {
+    color: #684b3e;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
 .footer {
     min-height: 50px;
     display: flex;
